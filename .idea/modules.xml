@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/20soNguyenTo/20soNguyenTo.iml" filepath="$PROJECT_DIR$/TH-5-11-25/20soNguyenTo/20soNguyenTo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/TH-tren-lop/TH-tren-lop.iml" filepath="$PROJECT_DIR$/TH-5-11-25/TH-tren-lop/TH-tren-lop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-13-25/baiTap/baiTap.iml" filepath="$PROJECT_DIR$/TH-5-13-25/baiTap/baiTap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/bmi-calcu/bmi-calcu.iml" filepath="$PROJECT_DIR$/TH-5-9-25/bmi-calcu/bmi-calcu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/cacLoaiHinh/cacLoaiHinh.iml" filepath="$PROJECT_DIR$/TH-5-11-25/cacLoaiHinh/cacLoaiHinh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/checkPrime/checkPrime.iml" filepath="$PROJECT_DIR$/TH-5-11-25/checkPrime/checkPrime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/code-onClass.iml" filepath="$PROJECT_DIR$/.idea/code-onClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/daoNguocSo/daoNguocSo.iml" filepath="$PROJECT_DIR$/TH-5-11-25/daoNguocSo/daoNguocSo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/dataType/dataType.iml" filepath="$PROJECT_DIR$/TH-5-9-25/dataType/dataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/day-in-month/day-in-month.iml" filepath="$PROJECT_DIR$/TH-5-9-25/day-in-month/day-in-month.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/exchangeMoney/exchangeMoney.iml" filepath="$PROJECT_DIR$/TH-5-9-25/exchangeMoney/exchangeMoney.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/linear-equation-resolver/linear-equation-resolver.iml" filepath="$PROJECT_DIR$/TH-5-9-25/linear-equation-resolver/linear-equation-resolver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/loiChao/loiChao.iml" filepath="$PROJECT_DIR$/TH-5-9-25/loiChao/loiChao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/menu/menu.iml" filepath="$PROJECT_DIR$/TH-5-11-25/menu/menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/namNhuan/namNhuan.iml" filepath="$PROJECT_DIR$/TH-5-9-25/namNhuan/namNhuan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/operatorExpression/operatorExpression.iml" filepath="$PROJECT_DIR$/TH-5-9-25/operatorExpression/operatorExpression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/readNumber/readNumber.iml" filepath="$PROJECT_DIR$/TH-5-9-25/readNumber/readNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/soNguyenTo100/soNguyenTo100.iml" filepath="$PROJECT_DIR$/TH-5-11-25/soNguyenTo100/soNguyenTo100.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/system-time/system-time.iml" filepath="$PROJECT_DIR$/TH-5-9-25/system-time/system-time.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-13-25/thucHanh/thucHanh.iml" filepath="$PROJECT_DIR$/TH-5-13-25/thucHanh/thucHanh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-9-25/tienDien/tienDien.iml" filepath="$PROJECT_DIR$/TH-5-9-25/tienDien/tienDien.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/tienLai/tienLai.iml" filepath="$PROJECT_DIR$/TH-5-11-25/tienLai/tienLai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TH-5-11-25/uocChung/uocChung.iml" filepath="$PROJECT_DIR$/TH-5-11-25/uocChung/uocChung.iml" />
+    </modules>
+  </component>
+</project>
