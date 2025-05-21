@@ -8,12 +8,17 @@ public class PayrollSystem {
         employees[3] = new FullTimeEmployee("Mai", 9000000);
         employees[4] = new PartTimeEmployee("Huong", 180, 30000);
 
+        double totalSalary = 0;
+
         for (Employee employee : employees) {
             System.out.println(employee.toString());
+            totalSalary += employee.calculateSalary();
             if (employee instanceof Intern) {
                  ((Intern) employee).attendTraining();
             }
             System.out.println("--------------");
         }
+        System.out.printf("Total salary: %.2f",totalSalary);
+
     }
 }
