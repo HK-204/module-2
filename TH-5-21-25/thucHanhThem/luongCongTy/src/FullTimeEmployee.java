@@ -1,20 +1,24 @@
-public class FullTimeEmployee extends Employee {
-    private double monthlySalary;
+public class FullTimeEmployee extends Employee implements Assignable{
+    private double bonus;
 
     public FullTimeEmployee(){}
 
-    public FullTimeEmployee(double monthlySalary) {
-        this.monthlySalary = monthlySalary;
+    public FullTimeEmployee(double bonus) {
+        this.bonus = bonus;
     }
 
-    public FullTimeEmployee(String name, double monthlySalary) {
-        super(name);
-        this.monthlySalary = monthlySalary;
+    public FullTimeEmployee(String name, String id, String email, double baseSalary, double bonus) {
+        super(name, id, email, baseSalary);
+        this.bonus = bonus;
+    }
+
+    public double getBonus() {
+        return bonus;
     }
 
     @Override
     public double calculateSalary() {
-        return monthlySalary;
+        return getBaseSalary() + getBonus();
     }
 
     @Override
@@ -26,4 +30,9 @@ public class FullTimeEmployee extends Employee {
     public String toString() {
         return super.toString();
     }
+
+    @Override
+    public void assignToProject(Project project) {
+        project.addMember(this);
+    };
 }

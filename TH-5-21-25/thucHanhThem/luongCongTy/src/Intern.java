@@ -1,29 +1,25 @@
-public class Intern extends Employee{
-    private double allowance;
+public class Intern extends Employee {
+    private String mentorName;
 
     public Intern(){}
 
-    public Intern(double allowance) {
-        this.allowance = allowance;
+    public Intern(String mentorName) {
+        this.mentorName = mentorName;
     }
 
-    public Intern(String name, double allowance) {
-        super(name);
-        this.allowance = allowance;
+    public Intern(String name, String id, String email, double baseSalary, String mentorName) {
+        super(name, id, email, baseSalary);
+        this.mentorName = mentorName;
     }
 
     @Override
     public double calculateSalary() {
-        return allowance;
+        return getBaseSalary();
     }
 
     @Override
     public String getType() {
         return "Intern";
-    }
-
-    public void attendTraining() {
-        System.out.println(getName() + " is attending training.");
     }
 
     @Override

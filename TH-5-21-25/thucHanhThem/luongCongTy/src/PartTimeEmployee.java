@@ -9,8 +9,8 @@ public class PartTimeEmployee extends Employee {
         this.hourlyRate = hourlyRate;
     }
 
-    public PartTimeEmployee(String name, int hoursWorked, double hourlyRate) {
-        super(name);
+    public PartTimeEmployee(String name, String id, String email, int hoursWorked, double hourlyRate) {
+        super(name, id, email);
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
     }
@@ -19,9 +19,13 @@ public class PartTimeEmployee extends Employee {
         return hoursWorked;
     }
 
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
     @Override
     public double calculateSalary() {
-        return hoursWorked * hourlyRate;
+        return getHoursWorked() * getHourlyRate();
     }
 
     @Override
@@ -31,6 +35,6 @@ public class PartTimeEmployee extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + " " + getHoursWorked();
+        return super.toString();
     }
 }

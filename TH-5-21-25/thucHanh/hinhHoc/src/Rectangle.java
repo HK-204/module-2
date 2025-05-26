@@ -1,4 +1,4 @@
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Resizeable{
     private double width = 1.0;
     private double length = 1.0;
 
@@ -42,5 +42,13 @@ public class Rectangle extends Shape{
     @Override
     public String toString() {
         return "A Rectangle with width=" + getWidth() + " and length=" + getLength() + ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        double oldArea = getArea();
+        width = width * (1 + percent/100);
+        double newArea = getArea();
+        System.out.println("Percent: " + percent + "\nBefore resize: " + oldArea + "\nAfter resize: " + newArea);
     }
 }
