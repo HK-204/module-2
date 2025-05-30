@@ -12,6 +12,10 @@ public class Intern extends Employee {
         this.mentorName = mentorName;
     }
 
+    public String getMentorName() {
+        return mentorName;
+    }
+
     @Override
     public double calculateSalary() {
         return getBaseSalary();
