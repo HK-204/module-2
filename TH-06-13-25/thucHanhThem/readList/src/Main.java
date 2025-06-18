@@ -1,9 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import advanced.*;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
@@ -53,9 +51,13 @@ public class Main {
                     break;
 
                 case 7:
-                    System.out.println("Enter file name to import: ");
-                    String filename = sc.nextLine();
-                    ProductImporter.importFromFile(filename);
+                    System.out.print("Enter filename to import (e.g., products.txt or products.dat): ");
+                    String importFile = sc.nextLine();
+                    List<Product> currentList = loadProducts();
+                    List<Product> updatedList = ProductImporter.importFromFile(importFile, currentList);
+                    writeToTextFile(updatedList, "products.txt");
+                    writeToBinaryFile(updatedList, "products.dat");
+                    System.out.println("Import completed.");
                     break;
 
                 case 0:
@@ -87,37 +89,112 @@ public class Main {
         return true;
     }
 
-    public static void addProduct() {
-        try {
-            System.out.println("Enter product id: ");
-            String newProductId = sc.nextLine();
-            System.out.println("Enter product name: ");
-            String newProductName = sc.nextLine();
-            double newProductPrice;
-            while (true) {
-                try {
-                    System.out.println("Enter product price: ");
-                    String input = sc.nextLine().trim();
-                    newProductPrice = Double.parseDouble(input);
-
-                    if (checkPrice(newProductPrice)) {
-                        break;
-                    }
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid price");
+    public static List<Product> readFromTextFile(String filePath) {
+        List<Product> products = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 3) {
+                    String id = parts[0].trim();
+                    String name = parts[1].trim();
+                    double price = Double.parseDouble(parts[2].trim());
+                    products.add(new Product(id, name, price));
                 }
             }
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("products.txt", true))) {
-                writer.write(newProductId + "," + newProductName + "," + newProductPrice);
-                writer.newLine();
-                Logger.log("Added " + newProductId + "," + newProductName + "," + newProductPrice);
-                System.out.println("Added successfully");
-            } catch (IOException e) {
-                System.err.println("Error adding product to file");
-            }
-        } catch (Exception e) {
-            System.err.println("Exception " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Failed to read text file: " + e.getMessage());
         }
+        return products;
+    }
+
+    @SuppressWarnings("unchecked")
+    public static List<Product> readFromBinaryFile(String filePath) {
+        List<Product> products = new ArrayList<>();
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return products;
+        }
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            Object obj = ois.readObject();
+            if (obj instanceof List<?>) {
+                products = (List<Product>) obj;
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Failed to read binary file: " + e.getMessage());
+        }
+
+        return products;
+    }
+
+    public static void writeToTextFile(List<Product> products, String filePath) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+            for (Product p : products) {
+                String line = p.getId() + "," + p.getName() + "," + p.getPrice();
+                bw.write(line);
+                bw.newLine();
+            }
+            bw.flush();
+        } catch (IOException e) {
+            System.out.println("Error writing to text file: " + e.getMessage());
+        }
+    }
+
+    public static void writeToBinaryFile(List<Product> products, String filePath) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            oos.writeObject(products);
+        } catch (IOException e) {
+            System.out.println("Error writing to binary file: " + e.getMessage());
+        }
+    }
+
+    public static List<Product> loadProducts() {
+        List<Product> products = readFromBinaryFile("products.dat");
+        if (products.isEmpty()) {
+            products = readFromTextFile("products.txt");
+        }
+        return products;
+    }
+
+    public static void addProduct() {
+        List<Product> products = loadProducts();
+
+        System.out.print("Enter product ID: ");
+        String id = sc.nextLine();
+
+        boolean exists = products.stream().anyMatch(p -> p.getId().equalsIgnoreCase(id));
+        if (exists) {
+            System.out.println("ID already exists. Cannot add product.");
+            return;
+        }
+
+        System.out.print("Enter product name: ");
+        String name = sc.nextLine();
+
+        double price;
+        while (true) {
+            try {
+                System.out.println("Enter product price: ");
+                String input = sc.nextLine().trim();
+                price = Double.parseDouble(input);
+
+                if (checkPrice(price)) {
+                    break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid price");
+            }
+        }
+
+        Product newProduct = new Product(id, name, price);
+        products.add(newProduct);
+        Logger.log("Added " + id + "," + name + "," + price);
+
+        writeToTextFile(products, "products.txt");
+        writeToBinaryFile(products, "products.dat");
+
+        System.out.println("Product added successfully.");
     }
 
     public static void showProductsHavePriceGreaterThan1000000() {
@@ -149,25 +226,7 @@ public class Main {
     }
 
     public static void editProductPriceById() {
-        List<Product> products = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader("products.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.trim().isEmpty()) continue;
-                String[] parts = line.split(",");
-                if (parts.length != 3) continue;
-
-                String productId = parts[0];
-                String productName = parts[1];
-                double productPrice = Double.parseDouble(parts[2]);
-                Product product = new Product(productId, productName, productPrice);
-                products.add(product);
-            }
-        } catch (IOException e) {
-            System.err.println("Error reading file " + e.getMessage());
-            return;
-        }
+        List<Product> products = loadProducts();
 
         System.out.println("Enter product id: ");
         String targetProductId = sc.nextLine();
@@ -203,13 +262,7 @@ public class Main {
             return;
         }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("products.txt"))) {
-            for (Product product : products) {
-                writer.write(product.getId() + "," + product.getName() + "," + product.getPrice());
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            System.err.println("Error updating file " + e.getMessage());
-        }
+        writeToTextFile(products, "products.txt");
+        writeToBinaryFile(products, "products.dat");
     }
 }
