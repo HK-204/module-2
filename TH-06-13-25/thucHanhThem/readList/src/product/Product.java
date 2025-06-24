@@ -1,3 +1,5 @@
+package product;
+
 import java.io.Serializable;
 
 public class Product implements Serializable {
@@ -29,6 +31,6 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+        return "product.Product [id=" + id + ", name=" + name + ", price=" + price + "]";
     }
 }
