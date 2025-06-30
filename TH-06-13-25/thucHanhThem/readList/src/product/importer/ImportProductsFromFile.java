@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ImportProductsFromFile {
-    public static void execute(List<Product> currentProducts) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter file name to import (.txt or .dat): ");
-        String fileName = scanner.nextLine();
-
+    public static void execute(List<Product> currentProducts, String fileName) {
         ProductImportStrategy importStrategy;
 
         if (fileName.endsWith(".txt")) {

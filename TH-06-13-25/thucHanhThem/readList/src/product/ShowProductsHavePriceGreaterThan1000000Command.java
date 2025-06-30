@@ -4,8 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ShowProductsHavePriceGreaterThan1000000 {
-    public static void showProductsHavePriceGreaterThan1000000() {
+public class ShowProductsHavePriceGreaterThan1000000Command implements Command {
+    @Override
+    public void execute() {
         try (BufferedReader reader = new BufferedReader(new FileReader("products.txt"))) {
             String line;
             boolean found = false;

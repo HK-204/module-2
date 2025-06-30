@@ -30,15 +30,21 @@ public class MenuHandler {
 
             switch (choice) {
                 case 1:
-                    ShowProductList.showProductsList();
+                    Command showListCommand = new ShowProductListCommand();
+                    showListCommand.execute();
                     break;
 
                 case 2:
-                    AddProduct.addProduct();
+                    Product product = ProductInputHandler.getProductFromUser();
+                    if (product != null) {
+                        Command addCommand = new AddProductCommand(product);
+                        addCommand.execute();
+                    }
                     break;
 
                 case 3:
-                    ShowProductsHavePriceGreaterThan1000000.showProductsHavePriceGreaterThan1000000();
+                    Command showPriceGreaterThan1000000Command = new ShowProductsHavePriceGreaterThan1000000Command();
+                    showPriceGreaterThan1000000Command.execute();
                     break;
 
                 case 4:
@@ -58,8 +64,10 @@ public class MenuHandler {
                     break;
 
                 case 7:
+                    System.out.print("Enter file name to import (.txt or .dat): ");
+                    String fileName = sc.nextLine();
                     List<Product> loadedList = LoadProducts.loadProducts();
-                    ImportProductsFromFile.execute(loadedList);
+                    ImportProductsFromFile.execute(loadedList, fileName);
                     WriteToTextFile.writeToTextFile(loadedList, "products.txt");
                     WriteToBinaryFile.writeToBinaryFile(loadedList, "products.dat");
                     System.out.println("Import completed.");
