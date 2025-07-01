@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
-public class NewCustomer {
+public class NewCustomer implements Customer {
+    public double getDiscount(double amount) {
+        return amount;
+    }
 }

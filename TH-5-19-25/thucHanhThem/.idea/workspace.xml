@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b39e5d7e-2d5d-4eec-872f-8371f454b9b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Interface/Discount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Interface/Installment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Product/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Product/Clothes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Product/Electronics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-23-25/thucHanhThem/heThongDonHang/src/Product/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-25-25/thucHanh/calcu/src/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-25-25/thucHanh/calcu/src/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TH-5-25-25/thucHanh/calcu/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai2/bai2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai3/bai3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai4/bai4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maSVtuDong/maSVtuDong.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/CircleComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/CircleComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/CircleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Colorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Colorable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/RectangleComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/RectangleComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/RectangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Resizeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Resizeable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TH-5-21-25/thucHanh/hinhHoc/src/SquareTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2xVFZQwME2h8kSWuJ5FCXyieofb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/codegym/Module-2/code-onClass/TH-5-11-25/TH-tren-lop",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b39e5d7e-2d5d-4eec-872f-8371f454b9b0" name="Changes" comment="" />
+      <created>1748015388501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748015388501</updated>
+      <workItem from="1748015389525" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

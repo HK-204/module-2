@@ -1,6 +1,8 @@
+package product;
+
 public class Hat implements Product{
     @Override
     public void displayInfo() {
-        System.out.println("Product: Hat");
+        System.out.println("product.Product: product.Hat");
     }
 }

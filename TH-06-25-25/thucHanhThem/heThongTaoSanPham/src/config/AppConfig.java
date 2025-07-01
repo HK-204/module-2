@@ -1,3 +1,5 @@
+package config;
+
 public class AppConfig {
     private static AppConfig instance;
 
